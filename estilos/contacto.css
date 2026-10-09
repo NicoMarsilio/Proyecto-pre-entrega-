@@ -1,0 +1,172 @@
+/* ============================================================
+   CONTACTO
+   Formulario, equipo y mapa de la página de contacto
+   ============================================================ */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-form {
+    width: 58%;
+    min-width: 300px;
+    background-color: #FFFFFF;
+    border: 1px solid #E7E3DA;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(17, 20, 24, 0.06);
+    padding: 30px;
+}
+
+.form-field {
+    margin-bottom: 18px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #15181B;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #DDD9D0;
+    border-radius: 10px;
+    background-color: #FBFAF7;
+    font-size: 15px;
+    color: #15181B;
+}
+
+.form-field textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: 2px solid #FF5A1F;
+    border-color: transparent;
+}
+
+.team {
+    width: 38%;
+    min-width: 280px;
+}
+
+.team > h3 {
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.team-card {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #E7E3DA;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(17, 20, 24, 0.06);
+    padding: 16px;
+    margin-bottom: 16px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.team-card:hover {
+    box-shadow: 0 14px 30px rgba(17, 20, 24, 0.16);
+    transform: translateY(-4px);
+}
+
+.team-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 16px;
+    background-color: #F0EEE8;
+}
+
+.team-info h3 {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.team-role {
+    color: #FF5A1F;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.team-info p {
+    font-size: 14px;
+    color: #5A6169;
+    margin-bottom: 4px;
+}
+
+.team-info i {
+    color: #FF5A1F;
+    width: 16px;
+    margin-right: 6px;
+}
+
+.team-info a:hover {
+    color: #FF5A1F;
+}
+
+/* ============================================================
+   MAPA
+   Contenedor del iframe de Google Maps
+   ============================================================ */
+.map-container iframe {
+    width: 100%;
+    height: 440px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 26px rgba(17, 20, 24, 0.14);
+    display: block;
+}
+
+/* ============================================================
+   MEDIA QUERIES - CONTACTO
+   Formulario y equipo pasan a columna en pantallas chicas
+   ============================================================ */
+@media screen and (max-width: 992px) {
+    .contact-form {
+        width: 55%;
+    }
+
+    .team {
+        width: 42%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form,
+    .team {
+        width: 100%;
+    }
+
+    .team {
+        margin-top: 30px;
+    }
+
+    .map-container iframe {
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contact-form {
+        padding: 22px;
+    }
+
+    .map-container iframe {
+        height: 260px;
+    }
+}

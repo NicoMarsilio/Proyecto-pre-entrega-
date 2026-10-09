@@ -1,0 +1,185 @@
+/* ============================================================
+   CARRITO
+   Tabla estática del carrito, cupón y bloque de total
+   ============================================================ */
+.table-container {
+    background-color: #FFFFFF;
+    border: 1px solid #E7E3DA;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(17, 20, 24, 0.06);
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 640px;
+}
+
+.cart-table caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 14px;
+    color: #5A6169;
+    padding: 16px 20px 0;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 15px;
+    border-bottom: 1px solid #EFEBE3;
+}
+
+.cart-table thead th {
+    background-color: #111418;
+    color: #FFFFFF;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: none;
+}
+
+.cart-table tbody tr:hover {
+    background-color: #FBFAF7;
+}
+
+.cart-table img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: #F0EEE8;
+}
+
+.cart-table tfoot td {
+    background-color: #F6F4EF;
+    font-weight: 700;
+    font-size: 16px;
+    border-bottom: none;
+}
+
+.cart-back {
+    margin-top: 18px;
+}
+
+.cart-back a {
+    color: #FF5A1F;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.cart-back a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   CUPON Y TOTAL
+   Bloques lado a lado para aplicar cupón y ver el resumen
+   ============================================================ */
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.coupon,
+.cart-total {
+    width: 48%;
+    min-width: 280px;
+    background-color: #FFFFFF;
+    border: 1px solid #E7E3DA;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(17, 20, 24, 0.06);
+    padding: 26px;
+}
+
+.coupon h3,
+.cart-total h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.coupon-note {
+    color: #5A6169;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.coupon-field {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.coupon-field input {
+    width: 100%;
+    max-width: 260px;
+    padding: 12px 14px;
+    border: 1px solid #DDD9D0;
+    border-radius: 10px 0 0 10px;
+    background-color: #FBFAF7;
+    font-size: 15px;
+    color: #15181B;
+}
+
+.coupon-field input:focus {
+    outline: 2px solid #FF5A1F;
+    border-color: transparent;
+}
+
+.coupon-field .btn {
+    border-radius: 0 10px 10px 0;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #DDD9D0;
+    color: #5A6169;
+    font-size: 15px;
+}
+
+.total-final {
+    border-bottom: none;
+    color: #15181B;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+/* ============================================================
+   MEDIA QUERIES - CARRITO
+   Los bloques de cupón y total se apilan en pantalla chica
+   ============================================================ */
+@media screen and (max-width: 992px) {
+    .coupon,
+    .cart-total {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .coupon,
+    .cart-total {
+        width: 100%;
+    }
+
+    .coupon-field input {
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .coupon-field input {
+        border-radius: 10px;
+        margin-bottom: 12px;
+    }
+
+    .coupon-field .btn {
+        border-radius: 10px;
+    }
+}

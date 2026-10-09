@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Electro Online</title>
+    <meta name="description" content="Contactá a Electro Online: formulario, equipo, teléfono, correo y ubicación en el mapa.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../estilos/contacto.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <a href="../index.html" class="logo">Electro<span>Online</span></a>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#products">Productos</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="../index.html#reviews">Reseñas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li>
+                    <a href="carrito.html">
+                        Carrito <i class="fas fa-cart-shopping" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ==================== CABECERA ==================== -->
+        <section class="page-header">
+            <h1>Contacto</h1>
+            <p>Escribinos, llamanos o veninos a ver. Estamos para ayudarte.</p>
+        </section>
+
+        <!-- ==================== FORMULARIO ==================== -->
+        <section class="contact-section section-p1 section-m1">
+            <div class="section-heading">
+                <h2>Ponte en contacto</h2>
+                <p>Completá el formulario y te respondemos dentro de las 24 horas hábiles.</p>
+            </div>
+
+            <div class="contact-container">
+
+                <!-- ============IMPORTANTE - FORMSPREE ==================== -->
+                <form class="contact-form" method="POST" action="https://formspree.io/f/mwlvbklr">
+
+                    <div class="form-field">
+                        <label for="name">Nombre y apellido</label>
+                        <input type="text" id="name" name="nombre" placeholder="Ej: Ana Pérez" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Ej: ana@correo.com" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" name="asunto" placeholder="Ej: Consulta sobre un producto" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="mensaje" placeholder="Contanos en qué podemos ayudarte..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Enviar</button>
+
+                </form>
+
+                <!-- ==================== EQUIPO ==================== -->
+                <div class="team">
+                    <h3>Nuestro equipo</h3>
+
+                    <article class="team-card">
+                        <img src="../img/people/1.png" alt="Foto de Lucía Gómez" width="70" height="70">
+                        <div class="team-info">
+                            <h3>Lucía Gómez</h3>
+                            <p class="team-role">Vendedora</p>
+                            <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+541155551234">+54 11 5555-1234</a></p>
+                            <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:lucia@electroonline.com">lucia@electroonline.com</a></p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <img src="../img/people/2.png" alt="Foto de Diego Rivas" width="70" height="70">
+                        <div class="team-info">
+                            <h3>Diego Rivas</h3>
+                            <p class="team-role">Soporte técnico</p>
+                            <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+541155555678">+54 11 5555-5678</a></p>
+                            <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:diego@electroonline.com">diego@electroonline.com</a></p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <img src="../img/people/3.png" alt="Foto de Sofia Martínez" width="70" height="70">
+                        <div class="team-info">
+                            <h3>Sofía Martínez</h3>
+                            <p class="team-role">Coordinadora</p>
+                            <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+541155559012">+54 11 5555-9012</a></p>
+                            <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:sofia@electroonline.com">sofia@electroonline.com</a></p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== MAPA ==================== -->
+        <section class="map-section section-p1 section-m1">
+            <div class="section-heading">
+                <h2>Dónde estamos</h2>
+                <p>Visitanos en nuestro local de Buenos Aires.</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps?q=Av.+Corrientes+1234,+Buenos+Aires,+Argentina&output=embed" title="Mapa con la ubicación del local de Electro Online en Avenida Corrientes 1234, Buenos Aires" width="600" height="450" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- ==================== NEWSLETTER ==================== -->
+        <section class="newsletter section-p1">
+            <div class="newsletter-text">
+                <h2>Recibí ofertas antes que nadie</h2>
+                <p>Sumate a nuestra lista y enterate de lanzamientos y descuentos exclusivos.</p>
+            </div>
+            <form class="newsletter-form" action="#" method="POST">
+                <label class="label-hidden" for="newsletter-email">Correo electrónico</label>
+                <input type="email" id="newsletter-email" name="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn">Suscribirme</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-columns">
+
+            <div class="col">
+                <a href="../index.html" class="logo">Electro<span>Online</span></a>
+                <address>
+                    <p><i class="fas fa-location-dot" aria-hidden="true"></i> Av. Corrientes 1234, CABA</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> +54 11 5555-1234</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> hola@electroonline.com</p>
+                </address>
+                <div class="follow">
+                    <a href="#" aria-label="Facebook de Electro Online"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram de Electro Online"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Twitter de Electro Online"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="YouTube de Electro Online"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div class="col">
+                <h3>Mi cuenta</h3>
+                <ul>
+                    <li><a href="contacto.html">Iniciar sesión</a></li>
+                    <li><a href="carrito.html">Ver carrito</a></li>
+                    <li><a href="tienda.html">Ver productos</a></li>
+                    <li><a href="contacto.html">Ayuda</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="../index.html#reviews">Reseñas</a></li>
+                    <li><a href="../index.html#video">Sobre nosotros</a></li>
+                    <li><a href="tienda.html">Envíos y cambios</a></li>
+                </ul>
+            </div>
+
+            <div class="col form-details">
+                <h3>Descargá la app</h3>
+                <img src="../img/pay/app.jpg" alt="Banner para descargar la app en la App Store" width="140" height="46">
+                <img src="../img/pay/play.jpg" alt="Banner para descargar la app en Google Play" width="140" height="46">
+                <img src="../img/pay/pay.png" alt="Medios de pago aceptados: Visa, Mastercard y Mercado Pago" class="pay-image" width="260" height="60">
+            </div>
+
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Electro Online - Pre-entrega del curso de Front-End</p>
+        </div>
+    </footer>
+
+</body>
+</html>

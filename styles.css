@@ -1,0 +1,772 @@
+/* ============================================================
+   ELECTRO ONLINE - PRE-ENTREGA
+   Estilos globales del sitio: base, header, hero, productos,
+   banner, video, reseñas, newsletter, footer y cabeceras.
+   Solo HTML y CSS.
+   ============================================================ */
+
+/* Google Fonts - una sola familia: Sora */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+
+/* ============================================================
+   BASE
+   Reset general, tipografía, colores y clases utilitarias
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sora", sans-serif;
+}
+
+body {
+    background-color: #F6F4EF;
+    color: #15181B;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FF5A1F;
+    color: #FFFFFF;
+    padding: 14px 34px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #E64A0E;
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 10px 22px;
+    font-size: 14px;
+}
+
+.label-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: #5A6169;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+    .section-p1 {
+        padding: 40px 50px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section-p1 {
+        padding: 30px 24px;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+}
+
+/* ============================================================
+   HEADER
+   Barra superior oscura con logo y lista de navegación
+   ============================================================ */
+.header {
+    background-color: #111418;
+    color: #FFFFFF;
+    padding: 18px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: #FF5A1F;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav li {
+    margin-left: 28px;
+}
+
+.main-nav a {
+    color: #E8E6E1;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #FF5A1F;
+}
+
+.main-nav i {
+    font-size: 17px;
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        padding: 18px 50px;
+    }
+
+    .main-nav li {
+        margin-left: 22px;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .header {
+        flex-direction: column;
+        padding: 20px 24px;
+    }
+
+    .main-nav {
+        margin-top: 14px;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-nav li {
+        margin: 6px 12px;
+    }
+}
+
+/* ============================================================
+   HERO
+   Sección principal con imagen de fondo y degradado encima
+   ============================================================ */
+.hero {
+    background-image: linear-gradient(rgba(17, 20, 24, 0.82), rgba(17, 20, 24, 0.55)), url("img/hero4.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    padding: 60px 80px;
+    color: #FFFFFF;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #D8D5CE;
+    margin-bottom: 28px;
+}
+
+@media screen and (max-width: 1200px) {
+    .hero {
+        padding: 60px 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        min-height: 460px;
+        padding: 50px 24px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero {
+        min-height: 420px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+}
+
+/* ============================================================
+   PRODUCTOS
+   Grilla de tarjas con Flexbox: 4, 3, 2 y 1 por fila
+   ============================================================ */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.product {
+    width: 23%;
+    min-width: 240px;
+    background-color: #FFFFFF;
+    border: 1px solid #E7E3DA;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(17, 20, 24, 0.06);
+    padding: 16px;
+    margin-bottom: 24px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.product:hover {
+    box-shadow: 0 14px 30px rgba(17, 20, 24, 0.16);
+    transform: translateY(-6px);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    background-color: #F0EEE8;
+}
+
+.product-description {
+    padding-top: 14px;
+}
+
+.product-description span {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #FF5A1F;
+    margin-bottom: 4px;
+}
+
+.product-description h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+    .product {
+        width: 24%;
+        min-width: 220px;
+    }
+
+    .product img {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .product {
+        width: 31%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .product {
+        width: 100%;
+    }
+}
+
+/* ============================================================
+   BANNER
+   Franja promocional con imagen de fondo y degradado
+   ============================================================ */
+.banner {
+    background-image: linear-gradient(120deg, rgba(17, 20, 24, 0.92) 25%, rgba(255, 90, 31, 0.65)), url("img/banner/banner1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 70px 80px;
+}
+
+.banner-content {
+    max-width: 560px;
+}
+
+.banner-content h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.banner-content p {
+    color: #EDE9E2;
+    font-size: 16px;
+    margin-bottom: 22px;
+}
+
+@media screen and (max-width: 1200px) {
+    .banner {
+        padding: 60px 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        padding: 50px 24px;
+    }
+
+    .banner-content h2 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .banner-content h2 {
+        font-size: 24px;
+    }
+}
+
+/* ============================================================
+   VIDEO
+   Sección con video guardado en local
+   ============================================================ */
+.video-section {
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 34px;
+    margin-bottom: 26px;
+}
+
+.video-container src {
+    width: 100%;
+    height: 480px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 26px rgba(17, 20, 24, 0.14);
+}
+
+@media screen and (max-width: 1200px) {
+    .video-section h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-section h2 {
+        font-size: 26px;
+    }
+
+    .video-container src {
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .video-container src {
+        height: 220px;
+    }
+}
+
+/* ============================================================
+   RESEÑAS
+   Tarjetas de opiniones con CSS Grid: 3, 2 y 1 columna
+   ============================================================ */
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.review-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E7E3DA;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(17, 20, 24, 0.06);
+    padding: 26px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.review-card:hover {
+    box-shadow: 0 14px 30px rgba(17, 20, 24, 0.16);
+    transform: translateY(-4px);
+}
+
+.review-stars i {
+    color: #FF5A1F;
+    font-size: 14px;
+    margin-right: 3px;
+}
+
+.review-card h3 {
+    font-size: 18px;
+    margin: 14px 0 10px;
+}
+
+.review-card > p {
+    color: #5A6169;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+}
+
+.review-author img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+    background-color: #F0EEE8;
+}
+
+.author-name {
+    color: #15181B;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.author-role {
+    color: #5A6169;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 1200px) {
+    .reviews-container {
+        gap: 18px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .reviews-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .reviews-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   NEWSLETTER
+   Franja oscura con formulario de suscripción
+   ============================================================ */
+.newsletter {
+    background-color: #111418;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.newsletter-text {
+    max-width: 460px;
+}
+
+.newsletter-text h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.newsletter-text p {
+    color: #A8AEB5;
+    font-size: 15px;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-form input {
+    width: 300px;
+    padding: 14px 16px;
+    border: 1px solid #2A2F35;
+    border-radius: 10px 0 0 10px;
+    background-color: #1B2026;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+.newsletter-form input::placeholder {
+    color: #8A9099;
+}
+
+.newsletter-form input:focus {
+    outline: 2px solid #FF5A1F;
+    border-color: transparent;
+}
+
+.newsletter-form .btn {
+    border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .newsletter-text h2 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter-text {
+        margin-bottom: 20px;
+    }
+
+    .newsletter-form {
+        width: 100%;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+}
+
+/* ============================================================
+   FOOTER
+   Pie de página con datos de contacto, enlaces y pagos
+   ============================================================ */
+.footer {
+    background-color: #111418;
+    color: #C9CDD2;
+    padding: 60px 80px 30px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col {
+    width: 22%;
+    min-width: 200px;
+    margin-bottom: 24px;
+}
+
+.col .logo {
+    display: inline-block;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.col h3 {
+    color: #FFFFFF;
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+.col ul li {
+    margin-bottom: 10px;
+}
+
+.col ul a {
+    color: #C9CDD2;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.col ul a:hover {
+    color: #FF5A1F;
+}
+
+.col address {
+    font-style: normal;
+    font-size: 14px;
+    color: #A8AEB5;
+    margin-bottom: 18px;
+}
+
+.col address p {
+    margin-bottom: 8px;
+}
+
+.col address i {
+    color: #FF5A1F;
+    margin-right: 8px;
+}
+
+.follow a {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background-color: #1B2026;
+    color: #FFFFFF;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.follow a:hover {
+    background-color: #FF5A1F;
+}
+
+.form-details img {
+    width: 140px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+}
+
+.form-details .pay-image {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 8px;
+}
+
+.copyright {
+    border-top: 1px solid #2A2F35;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #8A9099;
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        padding: 50px 50px 26px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 40px 24px 24px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+    }
+}
+
+/* ============================================================
+   PAGE HEADER
+   Cabecera de páginas internas con imagen y degradado
+   ============================================================ */
+.page-header {
+    background-image: linear-gradient(rgba(17, 20, 24, 0.88), rgba(17, 20, 24, 0.62)), url("img/banner/banner1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 70px 80px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 44px;
+}
+
+.page-header p {
+    color: #D8D5CE;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+    .page-header {
+        padding: 60px 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-header {
+        padding: 50px 24px;
+    }
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .page-header h1 {
+        font-size: 26px;
+    }
+}

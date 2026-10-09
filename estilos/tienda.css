@@ -1,0 +1,36 @@
+/* ============================================================
+   TIENDA
+   Estilos propios de la página de tienda: intro del catálogo
+   ============================================================ */
+.shop-intro {
+    text-align: center;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shop-intro h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.shop-intro p {
+    color: #5A6169;
+    font-size: 16px;
+}
+
+/* ============================================================
+   MEDIA QUERIES - TIENDA
+   Ajustes de la intro en pantallas chicas
+   ============================================================ */
+@media screen and (max-width: 768px) {
+    .shop-intro h2 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .shop-intro h2 {
+        font-size: 22px;
+    }
+}
